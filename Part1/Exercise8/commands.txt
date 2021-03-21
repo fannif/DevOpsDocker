@@ -1,0 +1,6 @@
+The commands I used to build the image and run the container were:
+
+$ sudo docker build . -t curler
+$ sudo docker run -it curler
+
+I also had to add the part 'apt update; apt install curl' into the script file, because otherwise curl wasn't found and the code didn't work.
