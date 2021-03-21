@@ -1,0 +1,7 @@
+I used the web-server image built in exercise 1.7. The commands I used were:
+
+$ sudo docker build . -t web-server (to build the image from the 1.7 dockerfile)
+
+$ sudo docker run -p 3000:8080 web-server (to run it)
+
+After this, the server was running and I could visit localhost:3000 in a browser to see the message {"message":"You connected to the following path: /","path":"/"}. 
