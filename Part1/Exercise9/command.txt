@@ -1,0 +1,5 @@
+The command I used to get the logs created to my file system was:
+
+sudo docker run -v "$(pwd)/logs.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+
+This put the logs into the logs.log file in my system.
