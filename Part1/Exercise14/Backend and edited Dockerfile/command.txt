@@ -1,0 +1,4 @@
+The command used to build and run this backend:
+
+sudo docker build . -t backend && sudo docker run -p 8080:8080 backend
+

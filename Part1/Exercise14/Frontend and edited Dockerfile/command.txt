@@ -1,0 +1,3 @@
+The command used to build and run this:
+
+sudo docker build . -t frontend && sudo docker run -p 5000:5000 frontend
