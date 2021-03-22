@@ -1,0 +1,8 @@
+GitHub repository with a README for the project used here: https://github.com/fannif/randomizer
+
+Docker hub project: https://hub.docker.com/repository/docker/fannif/randomizer
+
+Create image and run using command:
+
+sudo docker build . -t randomizer && sudo docker run -it -p 3000:3000 randomizer
+
