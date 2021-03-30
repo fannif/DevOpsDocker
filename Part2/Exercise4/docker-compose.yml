@@ -1,0 +1,28 @@
+version: '3.5'  
+
+services: 
+   backend: 
+      image: backend
+      build: .
+      ports: 
+        - 8080:8080
+      links:
+        - redis
+      depends_on:
+        - redis
+      environment:
+        - REDIS_HOST=redis
+        
+   frontend:
+      image: frontend
+      build: .
+      ports:
+        - 5000:5000
+      links:
+        - redis
+        
+   redis:
+      image: redis
+      build: .
+      ports:
+        - 6379:6379
