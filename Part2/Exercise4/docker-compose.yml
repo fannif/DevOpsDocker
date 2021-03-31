@@ -3,7 +3,7 @@ version: '3.5'
 services: 
    backend: 
       image: backend
-      build: .
+      build: ./example-backend
       ports: 
         - 8080:8080
       links:
@@ -15,7 +15,7 @@ services:
         
    frontend:
       image: frontend
-      build: .
+      build: ./example-frontend
       ports:
         - 5000:5000
       links:
@@ -23,6 +23,5 @@ services:
         
    redis:
       image: redis
-      build: .
       ports:
         - 6379:6379
