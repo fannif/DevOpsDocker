@@ -1,0 +1,31 @@
+version: '3.5'  
+
+services: 
+   training:
+      image: training
+      build: ./ml-kurkkumopo-training-master
+      volumes: 
+        - ./model:/src/model
+        - ./imgs:/src/imgs
+        - ./ml-kurkkumopo-training-master/data:/src/data
+      
+   backend: 
+      image: backend
+      build: ./ml-kurkkumopo-backend-master
+      ports: 
+        - 5000:5000
+      links:
+        - training
+      depends_on:
+        - training
+      volumes:
+        - ./model:/src/model/
+        
+   frontend:
+      image: frontend
+      build: ./ml-kurkkumopo-frontend-master
+      ports:
+        - 3000:3000
+      depends_on:
+        - backend
+
