@@ -1,0 +1,4 @@
+The commands I used to make this work were:
+
+sudo docker-compose up -d --scale compute=5
+sudo docker-compose up --scale compute=5
