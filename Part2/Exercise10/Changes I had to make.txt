@@ -1,0 +1,3 @@
+In order to get all buttons to work, I had to make one change to the backend's dockerfile. When nginx was added to this project, the get and post requests began to be made from localhost instead of localhost:5000. That is why I had to change the REQUEST_ORIGIN variable in the backend dockerfile to be http://localhost. This was the only change I had to make.
+
+I also combined the changes to postgres from exercise 2.9 into the exerise 2.8 docker-compose.yml, but this was just to add the postgres volume.
